@@ -124,7 +124,7 @@ public class CD2SBGNML extends GeneralConverter {
 
                 logger.debug("Final process compartment is: "+processCompartmentId);
 
-                if (sameCompartmentForAllReactants && !processCompartmentId.equals("default")) {
+                if (sameCompartmentForAllReactants && processCompartmentId != null && !processCompartmentId.equals("default")) {
                     processGlyph.setCompartmentRef(this.glyphMap.get(processCompartmentId));
                 }
 
